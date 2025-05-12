@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  </head>
-  <body>
-    Enter your name: <input type="text" id="fname">
-	
-	<script type="text/javascript" src="./script.js">
-	</script>
-  </body>
+<head>
+  <title>Uppercase Input</title>
+</head>
+<body>
+
+  <label for="fname">Name:</label>
+  <input type="text" id="fname" name="fname">
+
+  <script>
+    // When the page loads, attach the blur event listener
+    document.getElementById('fname').addEventListener('blur', function () {
+      this.value = this.value.toUpperCase();
+    });
+  </script>
+
+</body>
 </html>
